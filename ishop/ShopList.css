@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(44, 59, 192);
+}
+
+.ShopList {
+    background-color: yellow;
+    border-spacing: 0 10px;
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse
+}
+
+.ShopList .ShopCaption {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: red;
+    font-weight: bolder;
+}
+
+.ShopList .Product .goodsImg img {
+    height: 100px;
+}
+
+.Product,
+.GoodsThead {
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ShopList td {
+    padding: 10px 40px;
+    color: rgb(44, 59, 192);
+}
+
+.ShopList tr {
+    font-weight: normal;
+    color: #039;
+    border-bottom: 2px solid red;
+    padding: 10px 8px;
+}
+
+.ShopList tr:hover td {
+    color: red;
+}

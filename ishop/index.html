@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Магазин</title>
+</head>
+
+<body>
+    <div id="conteiner"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+
+    <script src="ShopList.js"></script>
+    <link rel="stylesheet" type="text/css" href="ShopList.css" />
+
+    <script>
+
+        const shopName = "LiDL";
+        const goodsArr = [
+            {id:0, name:'Coca-Cola', price:1.66, url:'https://api.e-dostavka.by/UserFiles/images/catalog/Goods/8214/01368214/norm/01368214.n_1.png', count:25},
+            {id:1, name:'Fanta', price:1.65, url:'https://api.e-dostavka.by/UserFiles/images/catalog/Goods/2105/00012105/norm/00012105.n_1.png', count:37},
+            {id:2, name:'Sprite', price:1.64, url:'https://api.e-dostavka.by/UserFiles/images/catalog/Goods/2104/00012104/norm/00012104.n_1.png', count:12},
+        ];
+
+        ReactDOM.render(
+            React.createElement(ShopList, {shopName:shopName, goodsArr:goodsArr}),
+            document.getElementById('conteiner')
+        );
+
+    </script>
+
+</body>
+
+</html>
