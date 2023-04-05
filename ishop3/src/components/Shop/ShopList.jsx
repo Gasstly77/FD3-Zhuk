@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './ShopList.css';
 
 import ProductList from './Elements/ProductList.jsx';
+import InfoCard from 'C:/Users/Gastly/Documents/Learning/HomeTasks/FD3-Zhuk/ishop3/src/components/Information/InfoCard.jsx';
 
 
 
@@ -27,12 +28,16 @@ class ShopList extends React.Component {
           };
   
       state = {
+            selected:false,
             isActive: null,
-            goodsArr:this.props.goodsArr
+            goodsArr:this.props.goodsArr,
+            cardMode:0 // 0 - нет выделения, 1-просмотр, 2- редактирование, 3-удаление
         };
   
       setActiveMod = (code) => {
         this.setState({isActive:code});
+        this.setState({cardMode:1});
+        this.setState({selected:true})
       };
   
       deleteProduct = (code) => {
@@ -42,6 +47,8 @@ class ShopList extends React.Component {
   
       
     render() {
+
+        const [activeProduct] = this.state.goodsArr.filter((ap) => ap.code === this.state.isActive)
   
         const goods = this.state.goodsArr.map( (i) => {
             return (
@@ -64,19 +71,25 @@ class ShopList extends React.Component {
         });
   
        return (
-        < table className= 'ShopList' >
-            <caption className= 'ShopCaption'>
-                {this.props.shopName}
-            </caption>
-            <thead className= 'ShopName'>
-                <tr>
-                    {theadArr}
-                </tr>
-            </thead>
-            <tbody>
-                {goods}
-            </tbody>
-        </table>
+            <div className='container'>
+                < table className='ShopList' >
+                    <caption className= 'ShopCaption'>
+                        {this.props.shopName}
+                    </caption>
+                    <thead className= 'ShopName'>
+                        <tr>
+                            {theadArr}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {goods}
+                    </tbody>   
+                </table>
+                {this.state.cardMode===1 && this.state.selected && 
+                <InfoCard goods={activeProduct} />
+                }    
+            </div>
+        
        );
     }
   

@@ -1,0 +1,17 @@
+.InfoCard {
+    background-color: white;
+    border-spacing: 0 10px;
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse
+    
+}
+
+.InfoCard td {
+    padding: 10px 40px;
+    color: black;
+}
+
+.InfoCard img {
+    width: 100px;
+}
