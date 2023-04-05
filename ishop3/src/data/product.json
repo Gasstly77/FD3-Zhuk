@@ -1,0 +1,31 @@
+[
+
+    {
+    
+        "code":0,
+        "productname":"Coca-Cola",
+        "price":1.66,
+        "url":"https://api.e-dostavka.by/UserFiles/images/catalog/Goods/8214/01368214/norm/01368214.n_1.png",
+        "count":25
+    },
+
+    {
+    
+        "code":1,
+        "productname":"Fanta",
+        "price":1.65,
+        "url":"https://api.e-dostavka.by/UserFiles/images/catalog/Goods/2105/00012105/norm/00012105.n_1.png",
+        "count":37
+    },
+
+    {
+    
+        "code":2,
+        "productname":"Sprite",
+        "price":1.64,
+        "url":"https://api.e-dostavka.by/UserFiles/images/catalog/Goods/2104/00012104/norm/00012104.n_1.png",
+        "count":12
+    }
+
+
+]
