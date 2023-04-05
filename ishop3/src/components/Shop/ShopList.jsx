@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './ShopList.css';
 
 import ProductList from './Elements/ProductList.jsx';
-import InfoCard from 'C:/Users/Gastly/Documents/Learning/HomeTasks/FD3-Zhuk/ishop3/src/components/Information/InfoCard.jsx';
+import InfoCard from './Information/InfoCard.jsx';
 
 
 
