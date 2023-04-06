@@ -12,7 +12,9 @@ class ProductList extends React.Component {
               url: PropTypes.string.isRequired,
               cbDeleteProduct: PropTypes.func,
               cbSetActiveMod: PropTypes.func,
+              cbSetEditMod: PropTypes.func,
               isActive: PropTypes.number,
+              disableButtons: PropTypes.number,
       };
   
       clicked = () => {
@@ -24,11 +26,18 @@ class ProductList extends React.Component {
         const isDelete = window.confirm("Вы действительно хотите удалить?");
         isDelete && this.props.cbDeleteProduct(this.props.code);
       };
+
+      editElement = (e) => {
+        e.stopPropagation();
+        this.props.cbSetEditMod(this.props.code)
+
+      };
      
       render() {
   
         return ( 
-            <tr className={(this.props.isActive === this.props.code)? 'Product Active' : 'Product'} onClick={this.clicked}>
+            
+            <tr className={(this.props.isActive === this.props.code)? 'Product Active' : 'Product'} onClick={this.props.disableButtons==0 ? this.clicked : undefined}>
                 <td className= 'goodsImg'>
                     <img src = {this.props.url} alt = {this.props.productname} />
                 </td>
@@ -42,11 +51,15 @@ class ProductList extends React.Component {
                     {`${this.props.count} шт`}
                 </td>
                 <td>
-                    <button onClick={this.deleteElement}>
+                    <button  disabled={this.props.disableButtons==1} onClick={this.deleteElement}>
                         Удалить
                     </button>
                 </td>
-
+                <td>
+                    <button disabled={this.props.disableButtons==1} onClick={this.editElement}>
+                        Редактировать
+                    </button>
+                </td>
             </tr>
         );
     

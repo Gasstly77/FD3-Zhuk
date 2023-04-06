@@ -1,0 +1,31 @@
+.CardEdit {
+    background-color: white;
+    border-spacing: 0 10px;
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse
+    
+}
+
+.CardEdit td {
+    padding: 10px 40px;
+    color: black;
+}
+
+.CardEdit .validerror {
+    padding: 10px 10px;
+    color: red;
+}
+
+.CardEdit img {
+    width: 100px;
+}
+
+.CardEdit .NewProductButton{
+    background-color: white;
+    border-spacing: 0 10px;
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse
+  }
+

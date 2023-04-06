@@ -1,0 +1,29 @@
+.CardAdd {
+    background-color: white;
+    border-spacing: 0 10px;
+    padding: 10px;
+    margin: auto;
+    border-collapse: collapse
+    
+}
+
+.CardAdd td {
+    padding: 10px 40px;
+    color: black;
+}
+
+.CardAdd .validerror {
+    padding: 10px 10px;
+    color: red;
+}
+
+.CardAdd img {
+    width: 100px;
+}
+
+.CardAdd button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+
