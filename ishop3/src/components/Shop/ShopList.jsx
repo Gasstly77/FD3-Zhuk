@@ -78,7 +78,8 @@ class ShopList extends React.Component {
         changedProduct.url = newProduct.url;
         goodsArr[goodsIndex] = changedProduct;
         this.setState({goodsArr})
-        this.setState({disableButtons:0});        
+        this.setState({disableButtons:0});
+        this.setState({cardMode:0});     
       };
 
       editCancel = () => {
